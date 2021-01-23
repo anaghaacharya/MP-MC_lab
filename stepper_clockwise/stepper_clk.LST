@@ -1,0 +1,53 @@
+C51 COMPILER V8.05a   STEPPER_CLK                                                          01/19/2021 00:40:11 PAGE 1   
+
+
+C51 COMPILER V8.05a, COMPILATION OF MODULE STEPPER_CLK
+OBJECT MODULE PLACED IN stepper_clk.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE stepper_clk.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include<stdio.h>
+   2          #include<reg51.h>
+   3          
+   4          char xdata port _at_ 0xe803;
+   5          char xdata porta _at_ 0x800;
+   6          char idata acc _at_ 0x30;
+   7          
+   8          delay(){
+   9   1      int j;
+  10   1      for(j=0;j<800;j++)
+  11   1      {}
+  12   1      }
+  13          
+  14          void main(){
+  15   1      port=0x80;
+  16   1      while(1){
+  17   2      acc=0x88;
+  18   2      porta=acc;
+  19   2      delay();
+  20   2      acc=0x44;
+  21   2      porta=acc;
+  22   2      delay();
+  23   2      acc=0x22;
+  24   2      porta=acc;
+  25   2      delay();
+  26   2      acc=0x11;
+  27   2      porta=acc;
+  28   2      delay();
+  29   2      }
+  30   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     60    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
